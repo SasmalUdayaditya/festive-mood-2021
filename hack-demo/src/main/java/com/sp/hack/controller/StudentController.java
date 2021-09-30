@@ -4,7 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class StudentControllre {
+public class StudentController {
 
     public ResponseEntity<? extends  Object> getStudent(){
         return null;
