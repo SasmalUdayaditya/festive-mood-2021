@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <p>which item do you like to have!!</p>
+        <input name="grp1" type="radio" id="input1" value="Veg"> Veg</input>
+        <br>
+        <input name="grp1" type="radio" id="input2" value="Non Veg"> Non Veg</input>
+        <br>
+        <input name="grp1" type="radio" id="input3" value="Anything"> Anything</input>
+        <br><br>
+        <button onclick="fn1()">check item</button>
+        <button type="reset" onclick="fn2()">reset</button>
+
+        <ul id="vegItem" style="display : none">
+            <h3>List of Veg Item..</h3>
+            <li>McDonald's Fruit and Yogurt Parfait</li>
+            <li>Wendy's Sour Cream and Chive Baked Potato</li>
+            <li>Burger King Impossible Whopper</li>
+            <li>Chick-Fil-A Spicy Southwest Salad with No Chicken</li>
+            <li>Panera Modern Greek Salad with Quinoa</li>
+            <li>Taco Bell Veggie Power Bowl</li>
+            <li>Subway Veggie Delight</li>
+            <li>Starbucks Hearty Blueberry Oatmeal</li>
+            <li>Sonic Kid's Grilled Cheese</li>
+            <li>KFC Caesar Side Salad</li>
+            <li>Carl's Jr.Beyond Famous Star, no cheese</li>
+            <li>Panda Express Super Greens</li>
+            <li>Jack in the Box Side Salad with low-fat balsamic vinaigrette and croutons</li>
+            <li>Popeye's Popcorn Shrimp</li>
+            <li>Dunkin's Donuts Veggie Egg White Sandwich</li>
+        </ul>
+
+        <ul id="nonVegItem" style="display : none"> 
+            <h3>List of Non-Veg Item</h3>
+            <li>Fish Molee</li>
+            <li>Chicken Chettinad</li>
+            <li>Kerala Karimeen Fry</li>
+            <li>Aila Curry</li>
+            <li>Prawns Kuzhambu</li>
+            <li>Kheema with Coconut Curry</li>
+            <li>Kerala Chicken Roast</li>
+            <li>Payyoi Chicken Fry</li>
+            <li>Squid Fry</li>
+            <li>Squid Curry</li>
+            <li>Naadan Crab Masala</li>
+            <li>Chicken Salana</li>
+            <li>Kori Gassi</li>
+            <li>Hyderabadi Chicken Biryani</li>
+            <li>Coorg Pandi Curry</li>
+        </ul>
+        
+    </body>
+</html>
+
+<script>
+    function fn1() {        
+        var op1 = document.getElementById("input1");
+        var op2 = document.getElementById("input2");
+        var op3 = document.getElementById("input3");
+        if(op1.checked == true) {
+            document.getElementById("vegItem").style.display = "block";
+            document.getElementById("nonVegItem").style.display = "none";
+        }
+        else if(op2.checked == true) {
+            document.getElementById("vegItem").style.display = "none";
+            document.getElementById("nonVegItem").style.display = "block";
+        }
+        else if(op3.checked == true) {
+            document.getElementById("vegItem").style.display = "block";
+            document.getElementById("nonVegItem").style.display = "block";
+        }
+        else {
+            alert("Please select a Item..");
+        }
+    }
+
+    function fn2() {    
+        window.location.reload();
+    }
+</script>
